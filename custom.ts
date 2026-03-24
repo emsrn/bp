@@ -7,8 +7,8 @@ enum Choice {
 namespace tapis {
 
     
-    let boutonPrecedentC = 1-pins.digitalReadPin(DigitalPin.P13)
-    let boutonPrecedentD = 1-pins.digitalReadPin(DigitalPin.P14)
+    let boutonPrecedentC = 1
+    let boutonPrecedentD = 1
     let moteurON = false
 
     // Initialise les résistances pull-up pour les boutons
@@ -23,7 +23,7 @@ namespace tapis {
         if (choice == Choice.C) {
             let boutonActuel = pins.digitalReadPin(DigitalPin.P13)
             // détection appui unique (transition 0 → 1)
-            if (boutonPrecedentC == 0 && boutonActuel == 1) {
+            if (boutonPrecedentC == 1 && boutonActuel == 0) {
                 moteurON = !moteurON
                 if (moteurON) {
                     pins.digitalWritePin(DigitalPin.P15, 1)
@@ -38,7 +38,7 @@ namespace tapis {
 
         if (choice == Choice.D) {
             let boutonActuel = pins.digitalReadPin(DigitalPin.P14)
-            if (boutonPrecedentD == 0 && boutonActuel == 1) {
+            if (boutonPrecedentD == 1 && boutonActuel == 0) {
                 moteurON = !moteurON
                 if (moteurON) {
                     pins.digitalWritePin(DigitalPin.P15, 1)
