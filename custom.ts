@@ -12,8 +12,8 @@ namespace tapis {
 
     // Initialise les résistances pull-up pour les boutons
     export function init(): void {
-        pins.setPull(DigitalPin.P14, PinPullMode.PullUp) // bouton C
-        pins.setPull(DigitalPin.P13, PinPullMode.PullUp) // bouton D
+        pins.setPull(DigitalPin.P13, PinPullMode.PullUp) // bouton C
+        pins.setPull(DigitalPin.P14, PinPullMode.PullUp) // bouton D
     }
 
     //% block="Bouton %choice ON/OFF"
