@@ -6,9 +6,10 @@ enum Choice {
 //% weight=100 color=#ff69b4 icon=""
 namespace tapis {
 
-    let moteurON = false
+    
     let boutonPrecedentC = 1-pins.digitalReadPin(DigitalPin.P13)
     let boutonPrecedentD = 1-pins.digitalReadPin(DigitalPin.P14)
+    let moteurON = false
 
     // Initialise les résistances pull-up pour les boutons
     export function init(): void {
