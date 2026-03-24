@@ -9,6 +9,7 @@ namespace tapis {
     let moteurON = false
     let boutonPrecedentC = 0
     let boutonPrecedentD = 0
+    let boutonActuel = 0
 
     // Initialise les résistances pull-up pour les boutons
     export function init(): void {
